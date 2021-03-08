@@ -266,7 +266,7 @@ renv_retrieve_git <- function(record) {
 
   template <- c(
     "cd \"${DIR}\"",
-    "git init --verbose",
+    "git init",
     "git remote add --verbose origin \"${ORIGIN}\"",
     "git fetch --verbose origin \"${REF}\"",
     "git reset --verbose --hard FETCH_HEAD"

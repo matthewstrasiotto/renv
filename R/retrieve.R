@@ -266,10 +266,10 @@ renv_retrieve_git <- function(record) {
 
   template <- c(
     "cd \"${DIR}\"",
-    "git init --quiet",
-    "git remote add origin \"${ORIGIN}\"",
-    "git fetch --quiet origin \"${REF}\"",
-    "git reset --quiet --hard FETCH_HEAD"
+    "git init --verbose",
+    "git remote add --verbose origin \"${ORIGIN}\"",
+    "git fetch --verbose origin \"${REF}\"",
+    "git reset --verbose --hard FETCH_HEAD"
   )
 
   data <- list(

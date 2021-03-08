@@ -265,6 +265,9 @@ renv_retrieve_git <- function(record) {
   ensure_directory(path)
 
   template <- c(
+    "set GIT_TRACE=true",
+    "set GIT_CURL_VERBOSE=true",
+    "set GIT_SSH_COMMAND=ssh -vvv",
     "cd \"${DIR}\"",
     "git init",
     "git remote --verbose add origin \"${ORIGIN}\"",
